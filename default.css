@@ -1,0 +1,151 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    padding: 10px 10px;
+}
+
+main>div {
+    padding: 10px;
+}
+
+main>div:nth-child(1)>button,
+.task-form>form>div:nth-child(3)>button,
+.task-form>form>div:nth-child(3)>input[type=submit] {
+    padding: 4px;
+    border-radius: 5px;
+    border: none;
+    font-size: 1.1rem;
+}
+
+main>div:nth-child(1)>button:hover,
+.task-form>form>div:nth-child(3)>button:hover,
+.task-form>form>div:nth-child(3)>input[type=submit]:hover {
+    background-color: #dbdada;
+}
+
+main>div:nth-child(1)>button:active,
+.task-form>form>div:nth-child(3)>button:active,
+.task-form>form>div:nth-child(3)>input[type=submit]:active {
+    background-color: #f5f2f2;
+}
+
+main>div>table {
+    flex-grow: 1;
+    width: 100%;
+}
+
+
+.table-actions {
+    display: flex;
+    justify-content: end;
+    gap: 5px;
+}
+
+.table-actions>button {
+    background-color: red;
+    color: #fff;
+    padding: 4px;
+    border-radius: 5px;
+    border: none;
+    font-size: 1rem;
+}
+
+.table-actions>button:hover {
+    background-color: rgb(247, 87, 87);
+}
+
+.table-actions>button:active {
+    background-color: rgb(204, 10, 10);
+}
+
+.task-form::backdrop {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.task-form[open] {
+    opacity: 1;
+    transform: scaleY(1);
+}
+
+.task-form {
+    border: none;
+    border-radius: 10px;
+    margin: auto auto;
+    padding: 10px;
+    width: 50%;
+
+    opacity: 0;
+    transform: scaleY(0);
+    transition:
+        opacity 0.3s ease-out,
+        transform 0.3s ease-out,
+        overlay 0.3s ease-out allow-discrete,
+        display 0.3s ease-out allow-discrete;
+}
+
+.task-form>form>div {
+    margin: 10px 0px;
+}
+
+.task-form>form>div:nth-child(1) {
+    display: flex;
+    justify-content: end;
+}
+
+.task-form>form>div:nth-child(1)>label {
+    text-transform: uppercase;
+    font-weight: bolder;
+    text-align: start;
+    margin: auto 0px;
+    flex-grow: 1;
+}
+
+.task-form>form>div:nth-child(1)>button {
+    background-color: transparent;
+    border: none;
+    font-size: 1.5rem;
+    width: 40px;
+    height: 40px;
+}
+
+.task-form>form>div:nth-child(1)>button:hover {
+    color: red;
+}
+
+.task-form>form>div:nth-child(2) {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.task-form>form>div:nth-child(2)>label {
+    font-weight: lighter;
+}
+
+.task-form>form>div:nth-child(2)>input[type=text] {
+    background-color: #f5f2f2;
+    border: none;
+    font-size: 1.3rem;
+    padding: 3px 4px;
+    border-radius: 5px;
+}
+
+.task-form>form>div:nth-child(3) {
+    display: flex;
+    justify-content: end;
+}
+
+.task-form>form>div:nth-child(3)>button {
+    margin-right: 10px;
+}
+
+.task-checked {
+    text-decoration: line-through;
+}

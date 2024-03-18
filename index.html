@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="default.css">
+    <title>Todo App</title>
+</head>
+
+<body>
+    <main>
+        <div>
+            <button btn-new-task>Nueva Tarea</button>
+        </div>
+        <hr>
+        <div table-container>
+            <!-- <table>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Nombre Tarea</th>
+                    <th scope="col">Acciones</th>
+                </tr>
+            </table> -->
+        </div>
+    </main>
+
+    <dialog task-form class="task-form">
+        <form action="" method="post">
+            <div>
+                <label>Nueva Tarea</label>
+                <button form-close><i class="bi bi-x-lg"></i></button>
+            </div>
+            <div>
+                <label for="txtTarea">Nombre de la Tarea</label>
+                <input form-text-input type="text" name="txtTarea">
+            </div>
+            <div>
+                <button form-cancel>Cancelar</button>
+                <input form-submit type="submit" value="Guardar">
+            </div>
+        </form>
+    </dialog>
+</body>
+<script src="script.js"></script>
+
+</html>
