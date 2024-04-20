@@ -12,8 +12,12 @@ const taskForm = document.querySelector("[task-form]");
 
 document.addEventListener("DOMContentLoaded", (event) => {
     taskList = [];    
-    taskList = JSON.parse(localStorage.getItem("todos"));
-    refreshTable(taskList);
+    todos = localStorage.getItem("todos");
+    if (todos !== null){
+        taskList = JSON.parse(localStorage.getItem("todos"));
+        refreshTable(taskList);
+    }    
+
 });
 
 
